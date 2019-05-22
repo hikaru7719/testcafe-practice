@@ -1,0 +1,23 @@
+{
+  "name": "testcafe-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "testcafe chrome test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hikaru7719/testcafe-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hikaru7719/testcafe-practice/issues"
+  },
+  "homepage": "https://github.com/hikaru7719/testcafe-practice#readme",
+  "dependencies": {
+    "testcafe": "^1.1.4"
+  }
+}
