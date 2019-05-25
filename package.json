@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "testcafe chrome test.js"
+    "start": "testcafe chrome test.ts -L"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,17 @@
   },
   "homepage": "https://github.com/hikaru7719/testcafe-practice#readme",
   "dependencies": {
-    "testcafe": "^1.1.4"
+    "testcafe": "^1.1.4",
+    "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/eslint": "^4.16.6",
+    "@types/eslint-plugin-prettier": "^2.2.0",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0"
   }
 }
