@@ -11,7 +11,7 @@ const myMail = process.env.TESTCAFE_LOGIN_MAIL;
 test("my first test", async t => {
   const date = new Date().getDate();
   const clander = await Selector(".calendars")
-    .child(1)
+    .child(2)
     .find("table")
     .find("tbody")
     .find("tr")
