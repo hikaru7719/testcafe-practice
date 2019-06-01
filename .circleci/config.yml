@@ -54,7 +54,7 @@ workflows:
   end-to-end:
     triggers:
       - schedule:
-          cron: "0 4 * * 13"
+          cron: "0 13 * * 6"
           filters:
             branches:
               only:
