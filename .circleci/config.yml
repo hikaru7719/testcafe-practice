@@ -25,30 +25,26 @@ jobs:
       - store_test_results:
           path: /tmp/test-results
 
-    end-to-end:
-      docker:
-        - image: circleci/node:10.14-browsers
+  end-to-end:
+    docker:
+      - image: circleci/node:10.14-browsers
 
-      working_directory: ~/repo
+    working_directory: ~/repo
 
-      steps:
-        - checkout
-        - restore_cache:
-            keys:
-              - v1-dependencies-{{ checksum "package.json" }}
-              - v1-dependencies-
-
-        - run: yarn install
-
-        - save_cache:
-            paths:
-              - node_modules
-            key: v1-dependencies-{{ checksum "package.json" }}
-
-        - run: yarn start
-
-        - store_test_results:
-            path: /tmp/test-results
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: yarn start
+      - store_test_results:
+          path: /tmp/test-results
 
 workflows:
   version: 2
@@ -58,7 +54,7 @@ workflows:
   end-to-end:
     triggers:
       - schedule:
-          cron: "0 0 * * 6"
+          cron: "0 0 * * 7"
           filters:
             branches:
               only:
