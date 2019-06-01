@@ -51,10 +51,21 @@ workflows:
   build:
     jobs:
       - build
+  cache:
+    triggers:
+      - schedule:
+          cron: "58 13 * * 6"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build
+
   end-to-end:
     triggers:
       - schedule:
-          cron: "0 13 * * 6"
+          cron: "0 14 * * 6"
           filters:
             branches:
               only:
