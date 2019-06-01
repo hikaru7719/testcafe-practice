@@ -46,5 +46,5 @@ test("my first test", async t => {
   const submit2 = await Selector("input[type=submit]");
   await t.click(submit2);
   const submit3 = await Selector("input[type=submit]");
-  await t.click(submit3);
+  // await t.click(submit3);
 });
