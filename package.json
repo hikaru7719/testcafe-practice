@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome:headless test.js -r xunit:/tmp/test-results/res.xml",
-    "start": "testcafe chrome:headless auto_reserve.ts -r xunit:/tmp/test-results/res.xml"
+    "test": "testcafe chrome:headless test.js -r xunit:/tmp/test-results/res.xml --selector-timeout 500000 --assertion-timeout 500000 --page-load-timeout 50000",
+    "start": "testcafe chrome:headless auto_reserve.ts -r xunit:/tmp/test-results/res.xml --selector-timeout 500000 --assertion-timeout 500000 --page-load-timeout 50000"
   },
   "repository": {
     "type": "git",
