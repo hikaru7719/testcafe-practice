@@ -54,7 +54,7 @@ workflows:
   cache:
     triggers:
       - schedule:
-          cron: "0 16 * * 6"
+          cron: "30 14 * * 0"
           filters:
             branches:
               only:
