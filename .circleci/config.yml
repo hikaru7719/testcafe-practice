@@ -54,7 +54,7 @@ workflows:
   cache:
     triggers:
       - schedule:
-          cron: "58 14 * * 0"
+          cron: "58 14 * * 6"
           filters:
             branches:
               only:
@@ -65,7 +65,7 @@ workflows:
   end-to-end:
     triggers:
       - schedule:
-          cron: "0 15 * * 0"
+          cron: "0 15 * * 6"
           filters:
             branches:
               only:
